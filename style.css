@@ -1,0 +1,223 @@
+/* =========================
+   ComicVerse Con - style.css
+========================= */
+
+:root {
+  --bg-dark: #0b0f1a;
+  --bg-secondary: #151b2d;
+  --bg-card: #1b2238;
+  --primary: #ff2e63;
+  --secondary: #08d9d6;
+  --accent: #f9ed69;
+  --text-light: #f5f7fa;
+  --text-muted: #c3cada;
+  --border-glow: #5f6fff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0b0f1a, #11182c, #1b1033);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 var(--primary);
+}
+
+.nav-link {
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top, rgba(8, 217, 214, 0.12), transparent 45%);
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 var(--primary);
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 650px;
+}
+
+.hero .btn-danger {
+  background-color: var(--primary);
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  transition: 0.3s ease;
+}
+
+.hero .btn-danger:hover {
+  background-color: var(--secondary);
+  color: #111;
+  transform: translateY(-2px);
+}
+
+/* Highlight Box */
+.hero .rounded,
+#guests .rounded {
+  background-color: rgba(21, 27, 45, 0.95) !important;
+}
+
+/* Section Headings */
+section h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 rgba(95, 111, 255, 0.4);
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  color: var(--text-light);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(95, 111, 255, 0.35);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: var(--text-muted);
+}
+
+/* Buttons */
+.btn-info {
+  background-color: var(--secondary);
+  border: none;
+  color: #111;
+  transition: 0.3s ease;
+}
+
+.btn-info:hover {
+  background-color: var(--accent);
+  color: #111;
+  transform: scale(1.04);
+}
+
+.btn-danger {
+  background-color: var(--primary);
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #ff4f7d;
+}
+
+/* Guest Section */
+#guests .shadow {
+  box-shadow: 0 0 20px rgba(249, 237, 105, 0.15) !important;
+}
+
+#guests p {
+  color: var(--text-muted);
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+}
+
+.modal-title {
+  text-transform: uppercase;
+}
+
+.modal-body p {
+  color: var(--text-light);
+}
+
+/* Footer */
+footer {
+  background-color: #090c14 !important;
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Lists inside hero highlight box */
+.list-unstyled li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.list-unstyled li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
